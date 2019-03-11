@@ -4,7 +4,7 @@ FROM ubuntu:latest
 SHELL ["/bin/bash", "-c", "-l"]
 
 RUN apt-get update
-RUN apt-get install -y curl zip unzip
+RUN apt-get install -y curl zip unzip git
 
 RUN useradd --create-home --shell /bin/bash user
 
