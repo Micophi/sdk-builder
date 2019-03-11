@@ -1,7 +1,7 @@
 FROM micophi/sdk-builder-base:latest
 
 
-RUN sdk install java 8.0.192-zulu
+RUN sdk install java 8.0.202-zulu
 RUN sdk install gradle 5.0
 
 USER root
