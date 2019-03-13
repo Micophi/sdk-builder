@@ -1,6 +1,5 @@
 FROM subparticles/sdk-builder-base:latest
 
-
 RUN sdk install java 8.0.202-zulu
 RUN sdk install gradle 5.0
 
@@ -9,10 +8,8 @@ RUN curl -L https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 RUN unzip -o -q sdk-tools-linux.zip -d /opt/sdk-tools-linux
 RUN chown -R user:user /opt/sdk-tools-linux
 
-
 ENV ANDROID_HOME=/opt/sdk-tools-linux
 ENV PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
-
 
 USER user
 RUN yes | sdkmanager --licenses
